@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@craco/craco': ^6.4.5
+  '@fontsource/league-spartan': ^4.5.11
   '@fortawesome/fontawesome-svg-core': ^6.2.0
   '@fortawesome/free-regular-svg-icons': ^6.2.0
   '@fortawesome/free-solid-svg-icons': ^6.2.0
@@ -31,6 +32,7 @@ specifiers:
 
 dependencies:
   '@craco/craco': 6.4.5_3enxpygsq6y3cq7kx2ria6kg2y
+  '@fontsource/league-spartan': 4.5.11
   '@fortawesome/fontawesome-svg-core': 6.2.0
   '@fortawesome/free-regular-svg-icons': 6.2.0
   '@fortawesome/free-solid-svg-icons': 6.2.0
@@ -1512,6 +1514,10 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
+
+  /@fontsource/league-spartan/4.5.11:
+    resolution: {integrity: sha512-qxvMB9p919lYrPRClkthCqfUpDqbrrApM82Zw8C1MDT7yjc7hvfOcQU/yyX3SZIrgGPM86YSj9ehCxB8fiQy3A==}
+    dev: false
 
   /@fortawesome/fontawesome-common-types/6.2.0:
     resolution: {integrity: sha512-rBevIsj2nclStJ7AxTdfsa3ovHb1H+qApwrxcTVo+NNdeJiB9V75hsKfrkG5AwNcRUNxrPPiScGYCNmLMoh8pg==}

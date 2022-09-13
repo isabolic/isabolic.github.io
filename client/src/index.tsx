@@ -3,13 +3,10 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "@fontsource/league-spartan";
-import { Oscillator } from "./util/Oscillator";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
-
-Oscillator.initOciliator(false);
 
 root.render(
   <React.StrictMode>

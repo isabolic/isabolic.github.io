@@ -8,6 +8,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import "./theme/tailwind.css";
 import "./theme/common.css";
 import "animate.css";
+import { OscillatorComponent } from "./components/Oscillator";
 
 library.add(far, fas);
 
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
       <Provider store={store}>
         <AppReady>
+          <OscillatorComponent />
           <AppRoutes />
         </AppReady>
       </Provider>

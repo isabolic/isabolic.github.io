@@ -1,23 +1,21 @@
 import React, { useEffect } from "react";
+import { useWindowSize } from "react-use";
 import "./oscillator.css";
 import { Oscillator } from "./util";
 
-interface OscillatorProps {
-  width?: number;
-  height?: number;
-}
-
-export const OscillatorComponent = ({ width, height }: OscillatorProps) => {
+export const OscillatorComponent = () => {
   useEffect(() => {
     Oscillator.initOciliator(false);
   });
+
+  const { width, height } = useWindowSize();
 
   return (
     <canvas
       className="oscillator"
       id="canvas"
-      width={width ?? 949}
-      height={height ?? 879}
+      width={width}
+      height={height}
     ></canvas>
   );
 };

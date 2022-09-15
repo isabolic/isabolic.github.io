@@ -7,6 +7,6 @@ interface LoadingProps {
 export const Loading = ({ className }: LoadingProps) => (
   <FontAwesomeIcon
     icon={["fas", "circle-notch"]}
-    className={`animate-spin text-blue-500 ${className ?? "h-14 w-14"}`}
+    className={`animate-spin text-white ${className ?? "h-14 w-14"}`}
   />
 );

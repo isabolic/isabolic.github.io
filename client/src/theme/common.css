@@ -3,3 +3,67 @@ body {
     background-color: black;
     color: white;
 }
+
+h1.title:before,
+h1.title:after {
+    content: '<h1>';
+    font-family: "Marvel", sans-serif;
+    color: #515152;
+    font-size: 1.8rem;
+}
+
+.bodytag:before, .bodytag:after {
+    content: '<body>';
+    font-family: "Marvel", sans-serif;
+    color: #515152;
+    font-size: 1.8rem;
+    position: absolute;
+    left: 120px;
+}
+
+.bodytag:after {
+    content: '</body>';
+    bottom: 0;
+}
+
+h1.title:after {
+    content: '</h1>';
+}
+
+p.paragraph:before, p.paragraph:after {
+    content: '<p>';
+    font-family: "Marvel", sans-serif;
+    color: #515152;
+    font-size: 1.2rem;
+}
+
+
+p.paragraph:after {
+    content: '</p>';
+}
+
+.typo {
+    display: inline-block;
+}
+
+.hover-pulse-2:hover {
+    animation: pulse2 1s;
+}
+
+.empty {
+    width: 1rem;
+}
+
+@keyframes pulse2 {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+      transform: scale3d(2.05, 2.05, 2.05);
+    }
+
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }

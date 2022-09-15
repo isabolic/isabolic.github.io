@@ -9,6 +9,7 @@ import "./theme/tailwind.css";
 import "./theme/common.css";
 import "animate.css";
 import { OscillatorComponent } from "./components/Oscillator";
+import { BodyTag } from "./components";
 
 library.add(far, fas);
 
@@ -17,8 +18,10 @@ function App() {
     <div className="App">
       <Provider store={store}>
         <AppReady>
-          <OscillatorComponent />
-          <AppRoutes />
+          <BodyTag>
+            <OscillatorComponent />
+            <AppRoutes />
+          </BodyTag>
         </AppReady>
       </Provider>
     </div>

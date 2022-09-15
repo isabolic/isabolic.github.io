@@ -1,16 +1,24 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
+
 export const Menu = () => {
   return (
-    <menu className="flex flex-col justify-center items-center h-screen bg-neutral-900">
+    <menu className="flex relative flex-col justify-center items-center h-screen bg-neutral-900">
+      <div className="absolute top-5 left-0 w-full">
+        <Link to="/" className="flex justify-center">
+          <FontAwesomeIcon icon={["fas", "house"]} className="pointer" />
+        </Link>
+      </div>
       <nav className="flex flex-col py-20 items-center">
-        <a rel="about" className="p-2" href="/about">
+        <Link to="/about" className="p-2">
           About
-        </a>
-        <a rel="skills" className="p-2" href="/skills">
+        </Link>
+        <Link to="/skills" className="p-2">
           My Skills
-        </a>
-        <a rel="contact" className="p-2" href="/contact">
+        </Link>
+        <Link to="/contact" className="p-2">
           Contact
-        </a>
+        </Link>
       </nav>
       <ul className="social"></ul>
     </menu>

@@ -4,6 +4,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "animate.css";
 import "@fontsource/league-spartan";
+import "@fontsource/league-spartan/100.css";
+import "@fontsource/league-spartan/400.css";
 import "@fontsource/marvel";
 
 const root = ReactDOM.createRoot(

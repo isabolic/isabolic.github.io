@@ -44,6 +44,7 @@ export const AboutRoute = () => {
             depth={0}
             tags={[
               { value: "Javascript", weight: 50 },
+              { value: "JQuery", weight: 50 },
               { value: "React", weight: 50 },
               { value: "Typescript", weight: 50 },
               { value: "Vue", weight: 50 },
@@ -55,6 +56,7 @@ export const AboutRoute = () => {
               { value: "Redux", weight: 50 },
               { value: "NodeJS", weight: 50 },
               { value: "NestJS", weight: 50 },
+              { value: "Docker", weight: 50 },
             ]}
           />
         </div>

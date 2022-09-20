@@ -50,8 +50,16 @@ p.paragraph:after {
     animation: pulse2 1s;
 }
 
+.hover-heartBeat:hover {
+    animation: heartBeat 1s;
+}
+
 .empty {
     width: 1rem;
+}
+
+p.paragraph > .empty {
+    width: 0.5rem;
 }
 
 @keyframes pulse2 {

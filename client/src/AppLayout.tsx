@@ -7,7 +7,7 @@ export const AppLayout = () => {
       <div className="w-[5rem]">
         <Menu />
       </div>
-      <div className="w-full flex">
+      <div className="w-full flex grow">
         <Outlet></Outlet>
       </div>
     </div>

@@ -42,6 +42,10 @@ p.paragraph:after {
     content: '</p>';
 }
 
+p.paragraph {
+    font-weight: 100;
+}
+
 .typo {
     display: inline-block;
 }

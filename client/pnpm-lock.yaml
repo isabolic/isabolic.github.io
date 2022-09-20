@@ -25,6 +25,7 @@ specifiers:
   react-router: ^6.3.0
   react-router-dom: ^6.3.0
   react-scripts: 5.0.1
+  react-tags-canvas: ^1.0.1
   react-use: ^17.4.0
   redux-saga: ^1.2.1
   tailwindcss: ^3.1.8
@@ -54,6 +55,7 @@ dependencies:
   react-router: 6.3.0_react@18.2.0
   react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
   react-scripts: 5.0.1_lcpkensb7jie5krrreeio77aaa
+  react-tags-canvas: 1.0.1_react@18.2.0
   react-use: 17.4.0_biqbaboplfbrettd7655fr4n2y
   redux-saga: 1.2.1
   tailwindcss: 3.1.8
@@ -7711,6 +7713,15 @@ packages:
       - webpack-cli
       - webpack-hot-middleware
       - webpack-plugin-serve
+
+  /react-tags-canvas/1.0.1_react@18.2.0:
+    resolution: {integrity: sha512-Zfhp/eewYQeNvqRTyhz7yFYpdwaN3WYRfdZtTMJENgn4aiQQm49QLBsupr/JXGwtBDk4MK9MbvjefFv9etH2YQ==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: ^16.8.0
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /react-universal-interface/0.6.2_react@18.2.0+tslib@2.4.0:
     resolution: {integrity: sha512-dg8yXdcQmvgR13RIlZbTRQOoUrDciFVoSBZILwjE2LFISxZZ8loVJKAkuzswl5js8BHda79bIb2b84ehU8IjXw==}

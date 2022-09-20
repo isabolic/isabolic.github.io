@@ -73,17 +73,10 @@ export class Oscillator {
     }
 
     this.ctx.globalCompositeOperation = "source-over";
-    this.ctx.fillStyle = "#1D1D1D";
     this.ctx.fillRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
     this.ctx.globalCompositeOperation = "lighter";
-    this.ctx.strokeStyle = "hsla(346,98%,56%,0.25)";
     this.ctx.lineWidth = 1;
-
-    if (this.color === 1) {
-      this.ctx.strokeStyle = "hsla(346,98%,56%,0.25)";
-    } else {
-      this.ctx.strokeStyle = "hsla(171,98%,56%,0.25)";
-    }
+    this.ctx.strokeStyle = "hsla(171,98%,56%,0.25)";
 
     for (var i = 0, tendril; i < settings.trails; i++) {
       tendril = this.tendrils[i];
@@ -136,13 +129,11 @@ export class Oscillator {
     this.ctx.running = false;
   };
 
-  public static initOciliator(remove: boolean) {
+  public static initOciliator(remove: boolean, el: HTMLCanvasElement) {
     this.color = this.randomIntFromInterval(1, 2);
 
     if (!remove) {
-      this.ctx = (
-        document.getElementById("canvas") as HTMLCanvasElement
-      ).getContext("2d") as CanvasRenderingContext; // TODO
+      this.ctx = el.getContext("2d") as CanvasRenderingContext;
 
       this.ctx.running = true;
       this.ctx.frame = 1;

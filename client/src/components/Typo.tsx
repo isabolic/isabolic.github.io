@@ -7,11 +7,12 @@ interface TypoProps {
 }
 
 export const Typo = ({ text, delimiter, elsClass }: TypoProps) => {
+  const paragraph = text.replace(/[^\\]\\n/g, "¶");
   return (
     <>
-      {text.split(delimiter ?? "").map((c, i) => (
+      {paragraph.split(delimiter ?? "").map((c, i) => (
         <React.Fragment key={i}>
-          {c === "," ? (
+          {c === "¶" ? (
             <>
               <span className={`${elsClass} typo`}>,</span>
               <br />

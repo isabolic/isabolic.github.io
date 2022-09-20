@@ -10,13 +10,13 @@ export const Menu = () => {
         </Link>
       </div>
       <nav className="flex flex-col py-20 items-center">
-        <Link to="/about" className="p-2">
+        <Link to="/about" className="p-2 border-b w-full border-cyan">
           About
         </Link>
-        <Link to="/skills" className="p-2">
+        <Link to="/skills" className="p-2 border-b w-full border-cyan">
           My Skills
         </Link>
-        <Link to="/contact" className="p-2">
+        <Link to="/contact" className="p-2 border-b w-full border-cyan">
           Contact
         </Link>
       </nav>

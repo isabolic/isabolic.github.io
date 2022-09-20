@@ -10,10 +10,10 @@ export const AboutRoute = () => {
   return (
     <div className="relative flex w-full">
       <CenterContainer>
-        <h1 className="title text-teal-400 text-white lg=text-6xl md=text-4xl sm=text-2xl text-xl">
+        <h1 className="title text-teal-400 text-white lg:text-6xl md:text-4xl sm:text-2xl text-xl">
           <Typo elsClass="animate__animated hover-heartBeat" text="About Me" />
         </h1>
-        <p className="paragraph text-white whitespace-pre-wrap">
+        <p className="text-xl paragraph text-white whitespace-pre-wrap">
           <br />
           Born 29.04.1988, in Zagreb, Croatia. Started developing at the age of
           19. {"\n"} I have a serious passion for UI and UX animations and

@@ -19,6 +19,7 @@ h1.title:after {
     font-size: 1.8rem;
     position: absolute;
     left: 120px;
+    z-index: 1;
 }
 
 .bodytag:after {

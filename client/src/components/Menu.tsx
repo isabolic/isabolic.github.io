@@ -9,7 +9,7 @@ export const Menu = () => {
           <FontAwesomeIcon icon={["fas", "house"]} className="pointer" />
         </Link>
       </div>
-      <nav className="flex flex-col py-20 items-center">
+      <nav className="flex w-full flex-col py-20 items-center">
         <Link to="/about" className="p-2 border-b w-full border-cyan">
           About
         </Link>

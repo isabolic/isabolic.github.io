@@ -14,7 +14,7 @@ export const AppLayout = () => {
 
   return (
     <div className="flex">
-      <div className="w-[5rem]">
+      <div className="sm:w-[5rem] w-[6rem]">
         <Menu />
       </div>
       <div className="w-full overflow-hidden flex grow">

@@ -5,7 +5,7 @@ export const Menu = () => {
   return (
     <menu className="flex relative flex-col justify-center items-center h-screen bg-neutral-900">
       <div className="absolute top-5 left-0 w-full">
-        <Link to="/" className="flex justify-center">
+        <Link to="/" className="flex text-cyan justify-center">
           <FontAwesomeIcon icon={["fas", "house"]} className="pointer" />
         </Link>
       </div>

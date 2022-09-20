@@ -10,7 +10,7 @@ export const AboutRoute = () => {
   return (
     <div className="relative flex w-full">
       <CenterContainer>
-        <h1 className="title text-teal-400 text-white lg:text-6xl md:text-4xl sm:text-2xl text-xl">
+        <h1 className="title text-cyan text-white lg:text-6xl md:text-4xl sm:text-2xl text-xl">
           <Typo elsClass="animate__animated hover-heartBeat" text="About Me" />
         </h1>
         <p className="text-xl paragraph text-white whitespace-pre-wrap">
@@ -27,9 +27,7 @@ export const AboutRoute = () => {
       {wWidth > 1000 && (
         <div ref={ref} className="absolute w-full h-full">
           <TagsCanvas
-            textColour="#08FDD8"
-            outlineThickness={0.5}
-            outlineColour={"#FE0853"}
+            textColour="#21FDDC"
             maxSpeed={0.06}
             freezeActive={true}
             shuffleTags={true}

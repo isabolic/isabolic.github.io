@@ -8,7 +8,6 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import "./theme/tailwind.css";
 import "./theme/common.css";
 import "animate.css";
-import { OscillatorComponent } from "./components/Oscillator";
 import { BodyTag } from "./components";
 
 library.add(far, fas);
@@ -19,7 +18,6 @@ function App() {
       <Provider store={store}>
         <AppReady>
           <BodyTag>
-            <OscillatorComponent />
             <AppRoutes />
           </BodyTag>
         </AppReady>

@@ -59,6 +59,10 @@ p.paragraph {
     animation: heartBeat 1s;
 }
 
+.hover-headShake:hover {
+    animation: headShake 1s;
+}
+
 .empty {
     width: 1rem;
 }

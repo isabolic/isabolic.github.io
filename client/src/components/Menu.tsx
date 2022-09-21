@@ -9,14 +9,14 @@ export const Menu = () => {
           <FontAwesomeIcon icon={["fas", "house"]} className="pointer" />
         </Link>
       </div>
-      <nav className="flex w-full flex-col py-20 items-center">
-        <Link to="/about" className="p-2 border-b w-full border-cyan">
+      <nav className="menu">
+        <Link to="/about" className="menu-item">
           About
         </Link>
-        <Link to="/skills" className="p-2 border-b w-full border-cyan">
+        <Link to="/skills" className="menu-item">
           My Skills
         </Link>
-        <Link to="/contact" className="p-2 border-b w-full border-cyan">
+        <Link to="/contact" className="menu-item">
           Contact
         </Link>
       </nav>

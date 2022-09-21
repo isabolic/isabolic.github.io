@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    nav.menu {
+        @apply flex w-full flex-col py-20 items-center;
+    }
+    .menu-item {
+      @apply p-2 border-b border-slate-600 w-full hover:text-cyan text-center;
+    }
+}

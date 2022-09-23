@@ -5,8 +5,11 @@ export const Menu = () => {
   return (
     <menu className="flex relative flex-col justify-between items-center h-screen bg-neutral-900">
       <div className="p-4">
-        <Link to="/" className="flex text-cyan justify-center">
-          <FontAwesomeIcon fontSize={24} icon={["fas", "house"]} />
+        <Link
+          to="/"
+          className="flex text-cyan animate__animated justify-center hover-flash"
+        >
+          <FontAwesomeIcon fontSize={24} icon={["fas", "biohazard"]} />
         </Link>
       </div>
       <nav className="menu">

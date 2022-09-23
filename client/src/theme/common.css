@@ -67,6 +67,10 @@ p.paragraph {
     animation: flip 1s;
 }
 
+.hover-flash:hover {
+    animation: flash 1s;
+}
+
 .empty {
     width: 1rem;
 }

@@ -7,7 +7,7 @@ export const HomeRoute = () => (
       <h1 className="title text-white lg:text-6xl md:text-4xl sm:text-2xl text-xl">
         <Typo
           elsClass="animate__animated hover-pulse-2"
-          text="Hi,\n I'm Ivan,\n your frontend developer"
+          text="Hi,\n I'm Ivan,\n frontend developer"
         />
       </h1>
       <p className="paragraph">

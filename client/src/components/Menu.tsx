@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 export const Menu = () => {
   return (
-    <menu className="flex relative flex-col justify-center items-center h-screen bg-neutral-900">
-      <div className="absolute top-5 left-0 w-full">
+    <menu className="flex relative flex-col justify-between items-center h-screen bg-neutral-900">
+      <div className="p-4">
         <Link to="/" className="flex text-cyan justify-center">
-          <FontAwesomeIcon icon={["fas", "house"]} className="pointer" />
+          <FontAwesomeIcon fontSize={24} icon={["fas", "house"]} />
         </Link>
       </div>
       <nav className="menu">
@@ -20,7 +20,38 @@ export const Menu = () => {
           Contact
         </Link>
       </nav>
-      <ul className="social"></ul>
+      <ul className="flex flex-col">
+        <li className="p-3">
+          <a
+            href="https://www.linkedin.com/in/ivan-sabolic-3125b535/"
+            target="_blank"
+            rel="noreferrer"
+            className="block animate__animated hover:text-cyan hover-flip"
+          >
+            <FontAwesomeIcon fontSize={24} icon={["fab", "linkedin"]} />
+          </a>
+        </li>
+        <li className="p-3">
+          <a
+            href="https://github.com/isabolic"
+            target="_blank"
+            rel="noreferrer"
+            className="block animate__animated hover:text-cyan hover-flip"
+          >
+            <FontAwesomeIcon fontSize={24} icon={["fab", "github"]} />
+          </a>
+        </li>
+        <li className="p-3">
+          <a
+            href="https://www.strava.com/athletes/5766945"
+            target="_blank"
+            rel="noreferrer"
+            className="block animate__animated hover:text-cyan hover-flip"
+          >
+            <FontAwesomeIcon fontSize={24} icon={["fab", "strava"]} />
+          </a>
+        </li>
+      </ul>
     </menu>
   );
 };

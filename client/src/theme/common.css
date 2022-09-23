@@ -63,6 +63,10 @@ p.paragraph {
     animation: headShake 1s;
 }
 
+.hover-flip:hover {
+    animation: flip 1s;
+}
+
 .empty {
     width: 1rem;
 }

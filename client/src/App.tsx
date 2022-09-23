@@ -4,13 +4,14 @@ import { Provider } from "react-redux";
 import { store } from "./store/store";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { far } from "@fortawesome/free-regular-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import "./theme/tailwind.css";
 import "./theme/common.css";
 import "animate.css";
 import { BodyTag } from "./components";
 
-library.add(far, fas);
+library.add(far, fas, fab);
 
 function App() {
   return (

@@ -1,5 +1,16 @@
 import { PropsWithChildren } from "react";
 
-export const CenterContainer = ({ children }: PropsWithChildren<unknown>) => {
-  return <div className="flex justify-center flex-col p-5">{children}</div>;
+interface CenterContainerProps {
+  className?: string;
+}
+
+export const CenterContainer = ({
+  children,
+  className,
+}: PropsWithChildren<CenterContainerProps>) => {
+  return (
+    <div className={`flex justify-center p-5 ${className ?? "flex-col"}`}>
+      {children}
+    </div>
+  );
 };

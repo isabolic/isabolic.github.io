@@ -71,6 +71,10 @@ p.paragraph {
     animation: flash 1s;
 }
 
+.hover-tada:hover {
+    animation: tada 1s;
+}
+
 .empty {
     width: 1rem;
 }

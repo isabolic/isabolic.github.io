@@ -9,7 +9,7 @@ export const Menu = () => {
           to="/"
           className="flex text-cyan animate__animated justify-center hover-flash"
         >
-          <FontAwesomeIcon fontSize={24} icon={["fas", "biohazard"]} />
+          <FontAwesomeIcon fontSize={24} icon={["fas", "code"]} />
         </Link>
       </div>
       <nav className="menu">

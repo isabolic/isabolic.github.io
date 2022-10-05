@@ -8,6 +8,8 @@ COPY . .
 
 RUN pnpm install
 
+RUN REACT_APP_GA_TRACKING_ID=${GA_TRACKING_ID}
+
 RUN pnpm run build
 
 FROM nginx:1.19

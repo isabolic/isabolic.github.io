@@ -19,4 +19,4 @@ jobs:
       steps:
         - uses: actions/checkout@v2
         - uses: superfly/flyctl-actions/setup-flyctl@master
-        - run: flyctl deploy client/ --remote-only --build-secret REACT_APP_GA_TRACKING_ID=${{ secrets.GA_TRACKING_ID }}
+        - run: flyctl deploy client/ --remote-only

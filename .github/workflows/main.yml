@@ -11,7 +11,6 @@ on:
 env:
   FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
   GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
-  PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
 
 jobs:
   deploy:
@@ -20,4 +19,4 @@ jobs:
       steps:
         - uses: actions/checkout@v2
         - uses: superfly/flyctl-actions/setup-flyctl@master
-        - run: flyctl deploy client/ --remote-only --build-arg GA_TRACKING_ID=${GA_TRACKING_ID},PUBLIC_URL=${PUBLIC_URL}
+        - run: flyctl deploy client/ --remote-only --build-arg GA_TRACKING_ID=${GA_TRACKING_ID}

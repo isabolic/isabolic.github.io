@@ -10,7 +10,7 @@ export const Menu = ({onClick, onClose}: MenuProps) => {
   return (
     <menu className="flex relative flex-col justify-between items-center h-screen bg-neutral-900">
       {onClose &&
-      <div className="absolute right-0 top-0 p-4"  onClick={onClose}>
+      <div className="absolute right-0 top-0 p-4 z-30" onClick={onClose}>
         <FontAwesomeIcon fontSize={24} icon={["fas", "xmark"]} />
       </div>
       }

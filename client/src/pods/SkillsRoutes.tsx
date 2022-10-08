@@ -5,7 +5,7 @@ export const SkillsRoute = () => {
   return (
     <div className="relative flex w-full">
       <CenterContainer>
-        <h1 className="title text-cyan text-white lg:text-6xl text-4xl">
+        <h1 className="title text-cyan text-white lg:text-6xl text-2xl">
           <Typo
             elsClass="animate__animated hover-headShake"
             text="Weapons of Choice"

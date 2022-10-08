@@ -1,6 +1,6 @@
 import { Outlet, useLocation } from "react-router";
 import { animated, useTransition } from "react-spring";
-import { Menu } from "./components/Menu";
+import { AnimationMenu } from "./components/AnimationMenu";
 
 export const AppLayout = () => {
   const location = useLocation();
@@ -13,10 +13,8 @@ export const AppLayout = () => {
   });
 
   return (
-    <div className="flex">
-      <div className="sm:w-[5rem] w-[6rem]">
-        <Menu />
-      </div>
+    <div className="flex h-screen">
+      <AnimationMenu />
       <div className="w-full overflow-hidden flex grow">
         {transitions((styles) => (
           <animated.div className="flex w-full" style={styles}>

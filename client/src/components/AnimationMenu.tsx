@@ -33,6 +33,7 @@ export const AnimationMenu = () => {
           width: toggle !== ToggleState.INTIAL ? style.width : "0",
           bottom: 0,
           zIndex: 20,
+          height: '100%',
           overflow: "hidden"
         }}>
         <Menu onClose={() => set(ToggleState.CLOSE)}  onClick={() => set(ToggleState.CLOSE)} />

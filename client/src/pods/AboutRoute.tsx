@@ -19,8 +19,7 @@ export const AboutRoute = () => {
           {"\n"} I have a serious passion for UI and UX animations and creating
           intuitive user experiences. {"\n"} Fan of outdoor activities, TV
           series, and father of two fractious kids. {"\n"} Interested in the
-          entire frontend spectrum and working on ambitious projects with
-          positive people.
+          entire frontend spectrum.
           <br />
         </p>
       </CenterContainer>

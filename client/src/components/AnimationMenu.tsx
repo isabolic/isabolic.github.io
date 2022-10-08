@@ -18,9 +18,7 @@ export const AnimationMenu = () => {
     enter: toggle === ToggleState.OPEN || toggle === ToggleState.INTIAL ? { width: '100%' } : { width: '0' },
   })
 
-  const breakpoint = useBreakpoint()
-
-  console.log(breakpoint)
+  const breakpoint = useBreakpoint();
 
   return (
     <>

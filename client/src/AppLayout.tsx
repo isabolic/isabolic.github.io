@@ -17,7 +17,7 @@ export const AppLayout = () => {
       <AnimationMenu />
       <div className="w-full overflow-hidden flex grow">
         {transitions((styles) => (
-          <animated.div className="flex w-full" style={styles}>
+          <animated.div className="flex w-full justify-center lg:justify-start" style={styles}>
             <Outlet></Outlet>
           </animated.div>
         ))}

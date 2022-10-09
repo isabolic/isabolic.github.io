@@ -18,7 +18,7 @@ h1.title:after {
     color: #515152;
     font-size: 1.8rem;
     position: absolute;
-    left: 120px;
+    left: calc(50% - 37.5px);
     z-index: 1;
 }
 
@@ -26,6 +26,12 @@ h1.title:after {
     content: '</body>';
     bottom: 0;
 }
+
+@media only screen and (min-width: 1024px) {
+    .bodytag:before, .bodytag:after {
+        left: 120px;
+    }
+  }
 
 h1.title:after {
     content: '</h1>';

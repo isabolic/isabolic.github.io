@@ -14,8 +14,8 @@ export const AnimationMenu = () => {
   const [toggle, set] = useState<ToggleState>(ToggleState.INTIAL);
 
   const transitions = useTransition(toggle, {
-    from : toggle === ToggleState.OPEN || toggle === ToggleState.INTIAL ? { marginLeft: '-100%' } : { marginLeft: '0%' },
-    enter: toggle === ToggleState.OPEN || toggle === ToggleState.INTIAL ? { marginLeft: '0%' } : { marginLeft: '-100%' },
+    from : toggle === ToggleState.OPEN || toggle === ToggleState.INTIAL ? { left: '-100%' } : { left: '0%' },
+    enter: toggle === ToggleState.OPEN || toggle === ToggleState.INTIAL ? { left: '0%' } : { left: '-100%' },
   })
 
   const breakpoint = useBreakpoint();
@@ -29,9 +29,8 @@ export const AnimationMenu = () => {
       <animated.div
         style={{
           position: "fixed",
-          left: 0,
+          left: toggle !== ToggleState.INTIAL ? style.left : "-100%",
           width: "100%",
-          marginLeft: toggle !== ToggleState.INTIAL ? style.marginLeft : "-100%",
           bottom: 0,
           zIndex: 20,
           height: '100%',

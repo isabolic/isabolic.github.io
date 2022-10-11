@@ -9,7 +9,14 @@ import "@fontsource/league-spartan/400.css";
 import "@fontsource/marvel";
 import ReactGA from "react-ga";
 
-ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_ID!);
+const urlSearchParams = new URLSearchParams(window.location.search);
+
+ReactGA.initialize(
+  urlSearchParams.get("trackingOff")
+    ? ""
+    : process.env.REACT_APP_GA_TRACKING_ID!
+);
+
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 const root = ReactDOM.createRoot(

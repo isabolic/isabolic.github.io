@@ -4,7 +4,7 @@ import { SkillsRoute } from "../pods/SkillsRoutes";
 import { HomeRoute } from "./../pods/HomeRoute";
 
 export const Routes = {
-  home: "/:",
+  home: "/",
   about: "/about",
   skills: "/skills",
   contact: "/contact",

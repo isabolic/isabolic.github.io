@@ -79,6 +79,7 @@ export const SkillsRoute = () => {
               { value: "JQuery", weight: 50 },
               { value: "React", weight: 50 },
               { value: "Typescript", weight: 50 },
+              { value: "ES6", weight: 50 },
               { value: "Vue", weight: 50 },
               { value: "HTML5", weight: 50 },
               { value: "Oracle PL/SQL", weight: 50 },

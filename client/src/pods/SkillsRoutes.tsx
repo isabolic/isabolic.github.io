@@ -2,10 +2,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CenterContainer, Typo } from "../components";
 import TagsCanvas from "react-tags-canvas";
 import { useMeasure, useWindowSize } from "react-use";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 export const SkillsRoute = () => {
   const { width: wWidth } = useWindowSize();
   const [ref, { width, height }] = useMeasure<HTMLDivElement>();
+  usePageTitle("Skills")
 
   return (
     <div className="relative flex w-full">

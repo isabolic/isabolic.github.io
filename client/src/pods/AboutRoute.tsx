@@ -1,6 +1,8 @@
 import { CenterContainer, Typo } from "../components";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 export const AboutRoute = () => {
+  usePageTitle("About me")
   return (
     <div className="relative flex w-full">
       <CenterContainer>

@@ -1,7 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CenterContainer } from "../components";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 export const ContactRoute = () => {
+  usePageTitle("Contact")
+
   return (
     <>
       <CenterContainer className="w-full flex-col items-center">

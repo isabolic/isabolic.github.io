@@ -1,5 +1,5 @@
 import { useTitle } from "react-use"
-const mainTitle = 'Isabolic | Frontend Developer';
+const mainTitle = 'Ivan Sabolic | Frontend Developer';
 
 
 export const usePageTitle = (pageTitle?: string) => {

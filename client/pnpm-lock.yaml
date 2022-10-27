@@ -20,6 +20,7 @@ specifiers:
   animate.css: ^4.1.1
   autoprefixer: ^10.4.8
   craco-plugin-env: ^1.0.4
+  mangle-css-class-webpack-plugin: ^5.0.9
   react: ^18.2.0
   react-dom: ^18.2.0
   react-ga: ^3.3.1
@@ -72,6 +73,7 @@ dependencies:
 devDependencies:
   autoprefixer: 10.4.8
   craco-plugin-env: 1.0.4_@craco+craco@6.4.5
+  mangle-css-class-webpack-plugin: 5.0.9
   source-map-explorer: 2.5.3
 
 packages:
@@ -6356,6 +6358,10 @@ packages:
     resolution: {integrity: sha512-JmqCvUhmt43madlpFzG4BQzG2Z3m6tvQDNKdClZnO3VbIudJYmxsT0FNJMeiB2+JTSlTQTSbU8QdesVmwJcmLg==}
     dependencies:
       tmpl: 1.0.5
+
+  /mangle-css-class-webpack-plugin/5.0.9:
+    resolution: {integrity: sha512-34XVgfBC7suJSnJOYGFJcrxPwPADplq53aEi7NXok0K6WJsdKYaF74AinKFBvETInc2UayqZBAVmX9x7jv1Ojw==}
+    dev: true
 
   /mdn-data/2.0.14:
     resolution: {integrity: sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==}

@@ -63,7 +63,6 @@
   "devDependencies": {
     "autoprefixer": "^10.4.8",
     "craco-plugin-env": "^1.0.4",
-    "mangle-css-class-webpack-plugin": "^5.0.9",
     "source-map-explorer": "^2.5.3"
   }
 }

@@ -3,15 +3,18 @@ import { AppReady } from "./AppReady";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { far } from "@fortawesome/free-regular-svg-icons";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-import { fas } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faLinkedin,
+  faStrava,
+} from "@fortawesome/free-brands-svg-icons";
+import { faBars, faCircleNotch, faCode, faEnvelope, faPhone, faCircleDot } from "@fortawesome/free-solid-svg-icons";
 import "./theme/tailwind.css";
 import "./theme/common.css";
 import "animate.css";
 import { BodyTag } from "./components";
 
-library.add(far, fas, fab);
+library.add(faBars, faCircleNotch, faCode, faEnvelope, faPhone, faCircleDot, faGithub, faLinkedin, faStrava);
 
 function App() {
   return (

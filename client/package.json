@@ -36,6 +36,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
@@ -61,6 +62,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",
-    "craco-plugin-env": "^1.0.4"
+    "craco-plugin-env": "^1.0.4",
+    "source-map-explorer": "^2.5.3"
   }
 }

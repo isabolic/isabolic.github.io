@@ -17,8 +17,6 @@ ReactGA.initialize(
     : process.env.REACT_APP_GA_TRACKING_ID!
 );
 
-ReactGA.pageview(window.location.pathname + window.location.search);
-
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );

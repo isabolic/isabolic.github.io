@@ -7,7 +7,7 @@ import "@fontsource/league-spartan";
 import "@fontsource/league-spartan/100.css";
 import "@fontsource/league-spartan/400.css";
 import "@fontsource/marvel";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 const urlSearchParams = new URLSearchParams(window.location.search);
 

@@ -20,3 +20,4 @@ npm run build
 Every push to `main` deploys to GitHub Pages via `.github/workflows/deploy.yml`.
 One-time setup: repo **Settings → Pages → Source: GitHub Actions**.
 For a custom domain, set it under Settings → Pages; the build picks up the right base path automatically.
+Google Analytics: set the Actions variable `GA_ID` (Settings → Secrets and variables → Actions → Variables). Without it the site builds without analytics.

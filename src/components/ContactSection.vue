@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { track } from '../analytics'
 import { profile } from '../data/cv'
 
 const emit = defineEmits<{ terminal: [] }>()
@@ -7,6 +8,7 @@ const emit = defineEmits<{ terminal: [] }>()
 const copied = ref(false)
 
 async function copyEmail() {
+  track('copy_email')
   try {
     await navigator.clipboard.writeText(profile.email)
     copied.value = true

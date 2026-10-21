@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { track } from '../analytics'
 import { jobs, layers, toYear, type LayerId } from '../data/cv'
 
 const active = defineModel<LayerId[]>({ required: true })
@@ -40,6 +41,7 @@ function isOn(id: LayerId) {
 }
 
 function toggle(id: LayerId) {
+  track('layer_toggle', { layer: id, on: !active.value.includes(id) })
   active.value = active.value.includes(id) ? active.value.filter((l) => l !== id) : [...active.value, id]
 }
 </script>

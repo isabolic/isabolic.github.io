@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { track } from './analytics'
 import CareerRoute from './components/CareerRoute.vue'
 import ContactSection from './components/ContactSection.vue'
 import FieldNotes from './components/FieldNotes.vue'
@@ -11,6 +12,10 @@ import type { LayerId } from './data/cv'
 
 const activeLayers = ref<LayerId[]>([])
 const terminalOpen = ref(false)
+
+watch(terminalOpen, (open) => {
+  if (open) track('terminal_open')
+})
 
 function onKey(e: KeyboardEvent) {
   const target = e.target as HTMLElement

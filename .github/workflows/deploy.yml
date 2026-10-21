@@ -18,11 +18,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - id: pages
@@ -32,6 +32,9 @@ jobs:
 
       # base_path is "/portfolio" on <user>.github.io, or "" with a custom domain
       - run: npm run build -- --base=${{ steps.pages.outputs.base_path }}/
+        env:
+          # Settings → Secrets and variables → Actions → Variables
+          VITE_GA_ID: ${{ vars.GA_ID }}
 
       - uses: actions/upload-pages-artifact@v3
         with:

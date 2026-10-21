@@ -2,6 +2,7 @@
 import { nextTick, ref, watch } from 'vue'
 import { formatPeriod, jobs, layers, profile } from '../data/cv'
 import { useTheme } from '../composables/useTheme'
+import { track } from '../analytics'
 
 const open = defineModel<boolean>({ required: true })
 
@@ -91,6 +92,7 @@ function submit() {
   lines.value.push({ kind: 'in', text: raw })
 
   const [name, ...args] = raw.split(/\s+/)
+  track('terminal_command', { command: name.toLowerCase() })
   const command = commands[name.toLowerCase()]
   if (!command) {
     lines.value.push({ kind: 'err', text: `command not found: ${name}` })

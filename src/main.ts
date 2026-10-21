@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import { initAnalytics } from './analytics'
 import { vReveal } from './composables/reveal'
+import './fonts'
 import './styles/main.scss'
 
 initAnalytics()

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { track } from '../analytics'
+import { analyticsEnabled, consentOpen, track } from '../analytics'
 import { profile } from '../data/cv'
 
 const emit = defineEmits<{ terminal: [] }>()
@@ -52,7 +52,10 @@ async function copyEmail() {
 
       <footer class="footer mono">
         <span>© {{ new Date().getFullYear() }} {{ profile.name }}. Built with Vue 3 + a lot of contour lines.</span>
-        <button class="footer__hint" @click="emit('terminal')">psst, press <kbd>`</kbd></button>
+        <span class="footer__links">
+          <button v-if="analyticsEnabled" class="footer__hint" @click="consentOpen = true">analytics settings</button>
+          <button class="footer__hint" @click="emit('terminal')">psst, press <kbd>`</kbd></button>
+        </span>
       </footer>
     </div>
   </section>
@@ -127,6 +130,11 @@ div.contact__item {
   gap: 12px;
   font-size: 12px;
   color: var(--ink-faint);
+}
+
+.footer__links {
+  display: flex;
+  gap: 20px;
 }
 
 .footer__hint {

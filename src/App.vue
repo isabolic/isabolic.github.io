@@ -2,6 +2,7 @@
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { track } from './analytics'
 import CareerRoute from './components/CareerRoute.vue'
+import ConsentBanner from './components/ConsentBanner.vue'
 import ContactSection from './components/ContactSection.vue'
 import FieldNotes from './components/FieldNotes.vue'
 import SiteHeader from './components/SiteHeader.vue'
@@ -39,4 +40,5 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
     <ContactSection @terminal="terminalOpen = true" />
   </main>
   <TerminalOverlay v-model="terminalOpen" />
+  <ConsentBanner />
 </template>

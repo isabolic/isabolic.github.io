@@ -1,0 +1,13 @@
+// Self-hosted fonts (no requests to Google servers). latin-ext covers č, ć, š, ž, đ.
+import '@fontsource/space-grotesk/latin-400.css'
+import '@fontsource/space-grotesk/latin-ext-400.css'
+import '@fontsource/space-grotesk/latin-500.css'
+import '@fontsource/space-grotesk/latin-ext-500.css'
+import '@fontsource/space-grotesk/latin-700.css'
+import '@fontsource/space-grotesk/latin-ext-700.css'
+import '@fontsource/jetbrains-mono/latin-400.css'
+import '@fontsource/jetbrains-mono/latin-ext-400.css'
+import '@fontsource/jetbrains-mono/latin-500.css'
+import '@fontsource/jetbrains-mono/latin-ext-500.css'
+import '@fontsource/jetbrains-mono/latin-700.css'
+import '@fontsource/jetbrains-mono/latin-ext-700.css'

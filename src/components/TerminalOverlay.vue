@@ -2,7 +2,7 @@
 import { nextTick, ref, watch } from 'vue'
 import { formatPeriod, jobs, layers, profile } from '../data/cv'
 import { useTheme } from '../composables/useTheme'
-import { track } from '../analytics'
+import { analyticsEnabled, consent, consentOpen, track } from '../analytics'
 
 const open = defineModel<boolean>({ required: true })
 
@@ -68,6 +68,15 @@ const commands: Record<string, { help: string; run: (args: string[]) => string |
       args.join(' ') === 'hire ivan'
         ? `[sudo] permission granted. Opening mail client…`
         : `${args.join(' ') || 'sudo'}: nice try. Hint: sudo hire ivan`,
+  },
+  cookies: {
+    help: 'analytics consent settings',
+    run: () => {
+      if (!analyticsEnabled) return 'analytics are off in this build, nothing to consent to'
+      consentOpen.value = true
+      open.value = false
+      return `current choice: ${consent.value ?? 'not set'}`
+    },
   },
   clear: {
     help: 'clear screen',

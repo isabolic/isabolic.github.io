@@ -22,7 +22,7 @@ async function copyEmail() {
 <template>
   <section id="contact" class="section contact">
     <div class="wrap">
-      <p v-reveal class="eyebrow">04 · Next destination</p>
+      <p v-reveal class="eyebrow">05 · Next destination</p>
       <h2 v-reveal class="contact__title">
         Let's map<br />
         something <span class="contact__accent">new</span>.
@@ -42,6 +42,11 @@ async function copyEmail() {
         <a class="contact__item" :href="profile.github" target="_blank" rel="noopener">
           <span class="mono contact__label">github</span>
           <span>@{{ profile.handle }} ↗</span>
+        </a>
+
+        <a class="contact__item" :href="profile.linkedin" target="_blank" rel="noopener">
+          <span class="mono contact__label">linkedin</span>
+          <span>Ivan Sabolić ↗</span>
         </a>
 
         <div class="contact__item">

@@ -5,6 +5,7 @@ import CareerRoute from './components/CareerRoute.vue'
 import ConsentBanner from './components/ConsentBanner.vue'
 import ContactSection from './components/ContactSection.vue'
 import FieldNotes from './components/FieldNotes.vue'
+import ProjectsSection from './components/ProjectsSection.vue'
 import SiteHeader from './components/SiteHeader.vue'
 import StrataSection from './components/StrataSection.vue'
 import TerminalOverlay from './components/TerminalOverlay.vue'
@@ -36,6 +37,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
     <TopoHero />
     <StrataSection v-model="activeLayers" />
     <CareerRoute :active="activeLayers" />
+    <ProjectsSection :active="activeLayers" />
     <FieldNotes />
     <ContactSection @terminal="terminalOpen = true" />
   </main>

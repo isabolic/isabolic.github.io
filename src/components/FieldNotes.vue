@@ -30,7 +30,7 @@ const notes = [
 <template>
   <section id="notes" class="section">
     <div class="wrap">
-      <p v-reveal class="eyebrow">03 · Field notes</p>
+      <p v-reveal class="eyebrow">04 · Field notes</p>
       <h2 v-reveal class="title">What I bring to the expedition.</h2>
 
       <div class="notes">

@@ -8,6 +8,7 @@ const { theme, toggle } = useTheme()
 const links = [
   { href: '#strata', label: 'Strata' },
   { href: '#route', label: 'Route' },
+  { href: '#projects', label: 'Projects' },
   { href: '#notes', label: 'Notes' },
   { href: '#contact', label: 'Contact' },
 ]

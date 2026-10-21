@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { nextTick, ref, watch } from 'vue'
-import { formatPeriod, jobs, layers, profile } from '../data/cv'
+import { archive, formatPeriod, jobs, layers, profile, projects } from '../data/cv'
 import { useTheme } from '../composables/useTheme'
 import { analyticsEnabled, consent, consentOpen, track } from '../analytics'
 
@@ -39,6 +39,14 @@ const commands: Record<string, { help: string; run: (args: string[]) => string |
     help: 'list waypoints',
     run: () => jobs.map((j) => `  ${formatPeriod(j.from, j.to).padEnd(20)} ${j.company} — ${j.role}`).join('\n'),
   },
+  projects: {
+    help: 'list landmark projects',
+    run: () =>
+      [
+        ...projects.map((p) => `  ◆ ${p.name.padEnd(28)} ${p.client ?? ''}`),
+        ...archive.map((p) => `  ${p.kind === 'gis' ? '▲' : '●'} ${p.name}`),
+      ].join('\n'),
+  },
   layers: {
     help: 'list stack layers',
     run: () => layers.map((l) => `  ■ ${l.label}`).join('\n'),
@@ -49,7 +57,15 @@ const commands: Record<string, { help: string; run: (args: string[]) => string |
   },
   contact: {
     help: 'how to reach me',
-    run: () => `  email  ${profile.email}\n  phone  ${profile.phone}\n  github ${profile.github}`,
+    run: () =>
+      [
+        ['email', profile.email],
+        ['phone', profile.phone],
+        ['github', profile.github],
+        ['linkedin', profile.linkedin],
+      ]
+        .map(([label, value]) => `  ${label.padEnd(9)} ${value}`)
+        .join('\n'),
   },
   locate: {
     help: 'where am I',

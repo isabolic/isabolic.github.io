@@ -31,6 +31,7 @@ export const profile = {
   email: 'sabolic.ivan@gmail.com',
   phone: '+385 99 476 3121',
   github: 'https://github.com/isabolic',
+  linkedin: 'https://www.linkedin.com/in/ivan-s-3125b535',
   pitch:
     'Engineering leader and frontend developer with 15+ years of experience building SaaS platforms, real-time web apps, enterprise GIS and IoT telemetry dashboards.',
   languages: [
@@ -219,3 +220,117 @@ export function formatDuration(from: string, to: string | null): string {
   const m = months % 12
   return [y && `${y}y`, m && `${m}m`].filter(Boolean).join(' ') || '<1m'
 }
+
+export interface Project {
+  id: string
+  name: string
+  client?: string
+  summary: string
+  highlights?: string[]
+  stack: string[]
+  layers: LayerId[]
+  link?: string
+}
+
+export interface ArchiveProject {
+  id: string
+  name: string
+  summary: string
+  stack: string[]
+  kind: 'gis' | 'realtime'
+}
+
+export const projects: Project[] = [
+  {
+    id: 'iade',
+    name: 'ia.de Platform',
+    client: 'Four of them',
+    summary:
+      'Enterprise pharmacy SaaS built on Vue 3 web components and microservices, with AI-driven developer automation.',
+    highlights: [
+      'Embeddable web components for integrating pharmacy solutions',
+      'NestJS print and real-time chat modules',
+      'Claude + MCP server for workflow automation',
+    ],
+    stack: ['Vue 3', 'Web Components', 'Nuxt', 'Pinia', 'NestJS', 'Claude', 'MCP'],
+    layers: ['vue', 'node', 'ai'],
+    link: 'https://ia.de',
+  },
+  {
+    id: 'quartiermeister',
+    name: 'Quartiermeister',
+    client: 'B2B SaaS',
+    summary:
+      'Property management for buildings and campuses: renting, utility bills, services, and NFC door keys on your phone.',
+    highlights: [
+      'Web app for landlords',
+      'Web app for tenant companies',
+      'React Native mobile app for services and NFC room keys',
+    ],
+    stack: ['React', 'React Native', 'MobX', 'TypeScript'],
+    layers: ['react'],
+  },
+  {
+    id: 'greyp-g6',
+    name: 'Greyp G6 Fleet Management',
+    client: 'Greyp Bikes',
+    summary:
+      'Real-time telemetry tracking and metric analytics for G6 electric bikes, integrated with an IoT backend.',
+    highlights: ['Fleet maps on Mapbox', 'Real-time bike metrics'],
+    stack: ['React', 'Redux', 'Node.js', 'Firebase', 'Mapbox', 'TypeScript', 'AWS'],
+    layers: ['react', 'gis', 'node', 'devops'],
+  },
+  {
+    id: 'addresshub',
+    name: 'AddressHub',
+    client: 'DPD Switzerland',
+    summary: 'Application for managing and processing delivery addresses.',
+    stack: ['Vue', 'TypeScript', 'GraphQL'],
+    layers: ['vue'],
+  },
+]
+
+export const archive: ArchiveProject[] = [
+  {
+    id: 'lpis',
+    name: 'LPIS & LPIS-QA',
+    summary: 'Land parcel identification, plus inspection and quality control of land plots.',
+    stack: ['ExtJS', 'GeoExt', 'GeoServer', 'Oracle'],
+    kind: 'gis',
+  },
+  {
+    id: 'cadastre',
+    name: 'Cadastral portals',
+    summary: 'Pragma and the Macedonian portal for reviewing cadastral municipalities, parcels and administration.',
+    stack: ['OpenLayers', 'ExtJS', 'GeoExt', 'GeoServer', 'Oracle'],
+    kind: 'gis',
+  },
+  {
+    id: 'bihac',
+    name: 'Urban portal of Bihać',
+    summary: 'Review of urban plans for the city of Bihać (BiH).',
+    stack: ['OpenLayers', 'jQuery', 'GeoServer', 'Oracle'],
+    kind: 'gis',
+  },
+  {
+    id: 'arec',
+    name: 'AREC',
+    summary: 'Work on land plots, preparation and issuance of documentation.',
+    stack: ['OpenLayers', 'ExtJS', 'GeoExt', 'GeoServer', 'Oracle'],
+    kind: 'gis',
+  },
+  {
+    id: 'giscloud-fleet',
+    name: 'GIS Cloud fleet management',
+    summary: 'Built and integrated fleet management on a GIS SaaS platform.',
+    stack: ['Node.js', 'socket.io', 'jQuery', 'Bootstrap'],
+    kind: 'realtime',
+  },
+  {
+    id: 'vw-bank',
+    name: 'Volkswagen Bank file tracking',
+    summary: 'Real-time file monitoring modules.',
+    stack: ['Oracle APEX', 'Node.js', 'socket.io'],
+    kind: 'realtime',
+  },
+]
